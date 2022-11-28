@@ -1,0 +1,34 @@
+Step 1 - using class, properties, constructors, class factory, ToString()
+
+1. Make a new project in VS called FriendList.
+2. Model a Friend by using a class or struct, called Friend. A friend as following attributes.
+	First name, Last name, Email, Address (Street name, zip code, city, country).
+3. Create and instance of a friend using object initialization.
+4. Create an instance of a friend using constructor.
+5. Create a class Factory to create a random friend.
+6. Generate 10_000 friends and print out to the console the first 20 and the last 20
+
+Step 2 - List encapsulation
+
+1. Create a new class FriendList that encapsulated a list of friends
+2. In FriendList create a class Factory method that takes NrOfFrieds and as arguments and 
+   and creates and returns a instance of FriendList initialized with a list of random friend of a NrOfFriends length.
+3. Generate an instans of FriendList that contains 10_000 friends
+4. Printout Friend with index 123, and nr 456
+
+Step 3 - Protect the FriendList from unwanted changes.
+
+1. Make the list of friends in FriendList private
+2. Implement an indexer on the class FriendList to access a specific friend by index
+3. Printout Friend with index 123, and nr 456
+
+Step 4 - Override ToString()
+1. Implement ToString() in Friend and FriendList so that making Console.WriteLine() on the instance
+   of FriendList prints out the list.
+2. Generate a FriendList with 10 friends and print out the list
+
+Step 5 - Implement Contains and Sort in FriendList
+1. Implement IEquatable<Friend> and IComparable<Friend>
+2. Overload operators == and != in class Friend
+2. Implement a Method Sort() in FriendList that returns a list of friends sorted on lastnames
+3. Implement a Method Contains(Friend friend) that returns true if a friend is in the list

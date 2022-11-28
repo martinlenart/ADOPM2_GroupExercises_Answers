@@ -1,0 +1,11 @@
+1. Modellera ett Spelkort
+- Skapa ett spelkort
+- Ett skapat spelkort ska inte kunna ändras
+- Skriva ut i konsolen spelkortet, typ 
+  - Two of Spades, King of Hearts, Queen of Clubs, Ten of Diamonds
+
+2. Modellera en kortlek
+- Skapa en initierad kortlek med 52 kort
+- Blanda korten i kortleken
+- Sortera korten i kortleken
+- Skriva ut alla korten i kortleken

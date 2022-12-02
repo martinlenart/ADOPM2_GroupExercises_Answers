@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectPartBAnswers_B2
+namespace DeckOfCards
 {
-    class DeckOfCards : IDeckOfCards
+    public class DeckOfCards : IDeckOfCards
     {
         #region cards List related
         protected const int MaxNrOfCards = 52;
-        protected List<PlayingCard> cards = new List<PlayingCard>(MaxNrOfCards);
+        protected List<IPlayingCard> cards = new List<IPlayingCard>(MaxNrOfCards);
 
         public IPlayingCard this[int idx]
         {
@@ -21,7 +21,7 @@ namespace ProjectPartBAnswers_B2
         }
         #endregion
 
-        public PlayingCard Highest
+        public IPlayingCard Highest
         {
             get
             {
@@ -34,7 +34,7 @@ namespace ProjectPartBAnswers_B2
 
         public IPlayingCard DealOne()
         {
-            PlayingCard card = cards[^1];
+            IPlayingCard card = cards[cards.Count-1];
             cards.RemoveAt(cards.Count-1);
 
             return card;

@@ -3,17 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADOPM2_GroupExercises_Answers", "ADOPM2_GroupExercises_Answers\ADOPM2_GroupExercises_Answers.csproj", "{FEA489E2-340D-4C4A-9519-8E6345572C30}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FFDBB160-F9F5-4FC7-84A0-32C9BAF1BFF2}"
 	ProjectSection(SolutionItems) = preProject
 		DeckOfCards.txt = DeckOfCards.txt
 		FriendList.txt = FriendList.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendList", "FriendList\FriendList.csproj", "{ADC53ED5-5097-4A88-BAB0-C2FAA326F98D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FriendList", "FriendList\FriendList.csproj", "{ADC53ED5-5097-4A88-BAB0-C2FAA326F98D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckOfCards", "DeckOfCards\DeckOfCards.csproj", "{A022CC4A-DB18-47C6-9EB8-BF3DC6F2EAFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeckOfCards", "DeckOfCards\DeckOfCards.csproj", "{A022CC4A-DB18-47C6-9EB8-BF3DC6F2EAFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FEA489E2-340D-4C4A-9519-8E6345572C30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FEA489E2-340D-4C4A-9519-8E6345572C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FEA489E2-340D-4C4A-9519-8E6345572C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FEA489E2-340D-4C4A-9519-8E6345572C30}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ADC53ED5-5097-4A88-BAB0-C2FAA326F98D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ADC53ED5-5097-4A88-BAB0-C2FAA326F98D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADC53ED5-5097-4A88-BAB0-C2FAA326F98D}.Release|Any CPU.ActiveCfg = Release|Any CPU

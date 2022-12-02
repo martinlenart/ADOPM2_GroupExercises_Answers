@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectPartBAnswers_B2
+namespace DeckOfCards
 {
 	/// <summary>
 	/// Enum type representing a playing card color, also called suit
@@ -23,7 +23,7 @@ namespace ProjectPartBAnswers_B2
 		Knight, Queen, King, Ace                
 	}
 
-	interface IPlayingCard
+	public interface IPlayingCard : IComparable<IPlayingCard>
     {
 		/// <summary>
 		/// The color or suit of the card

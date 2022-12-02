@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectPartBAnswers_B2
+namespace DeckOfCards
 {
-    interface IDeckOfCards
+    public interface IDeckOfCards
     {
          /// <summary>
          /// The card at a particular position in the deck.

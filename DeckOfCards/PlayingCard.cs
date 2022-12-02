@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectPartBAnswers_B2
+namespace DeckOfCards
 {
-	public class PlayingCard:IComparable<PlayingCard>, IPlayingCard
+	public class PlayingCard: IPlayingCard
 	{
 		public PlayingCardSuit Suit { get; init; }
 		public PlayingCardValue Value { get; init; }
 
 		#region IComparable Implementation
 		//Need to compare not only Value but also Color if value is the same
-		public int CompareTo(PlayingCard other)
+		public int CompareTo(IPlayingCard other)
         {
 			if (this.Value != other.Value)
 				return this.Value.CompareTo(other.Value);

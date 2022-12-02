@@ -1,4 +1,4 @@
-﻿using ProjectPartBAnswers_B2;
+﻿using DeckOfCards;
 
 namespace DeckOfCards
 {
@@ -24,28 +24,35 @@ namespace DeckOfCards
             //IDeckOfCards myDeck = null; //Allows compilation
 
             //Once DeckOfCards is implemented, create an instance instead of null
-            IDeckOfCards myDeck = new ProjectPartBAnswers_B2.DeckOfCards();  
+            IDeckOfCards myDeck = new DeckOfCards();  
             Console.WriteLine($"\nFreshly created deck:");
-            Console.WriteLine(myDeck);
-
-            Console.WriteLine($"\nShuffled deck:");
-            myDeck.Shuffle();     //OK once implemented
             Console.WriteLine(myDeck);
 
             Console.WriteLine($"\nSorted deck:");
             myDeck.Sort();        //OK once implemented
             Console.WriteLine(myDeck);
 
+            Console.WriteLine($"\nShuffled deck:");
+            myDeck.Shuffle();     //OK once implemented
+            Console.WriteLine(myDeck);
 
+            Console.WriteLine($"\nCreate a hand of cards:");
+            IHandOfCards aHand = new HandOfCards();       //IHandOfCards aHands is fine
+            //HandOfCards aHand = new HandOfCards();          //HandOfCards aHand is also fine
+            aHand.Add(myDeck.DealOne());
+            aHand.Add(myDeck.DealOne());
+            aHand.Add(myDeck.DealOne());
+            aHand.Add(myDeck.DealOne());
+            aHand.Add(myDeck.DealOne());
+            Console.WriteLine(aHand);
 
-            //Appendix - only to show how to loop through enum types, you can use in DeckOfCards
-            for (PlayingCardSuit s = PlayingCardSuit.Clubs; s <= PlayingCardSuit.Spades; s++)
-            {
-                for (PlayingCardValue v = PlayingCardValue.Two; v <= PlayingCardValue.Ace; v++)
-                {
-                    Console.WriteLine($"Color = {s}, Value = {v}");
-                }
-            }
+            Console.WriteLine($"\nSorted hand of cards:");
+            aHand.Sort();        //OK once implemented
+            Console.WriteLine(aHand);
+
+            Console.WriteLine($"\nShuffled hand of cards:");
+            aHand.Shuffle();        //OK once implemented
+            Console.WriteLine(aHand);
         }
     }
 }

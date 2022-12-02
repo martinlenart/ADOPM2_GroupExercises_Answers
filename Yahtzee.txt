@@ -1,0 +1,8 @@
+Skapa en klass som modellerar tärningar i en kopp. 
+En användare av klassen ska kunna följande:
+- Sätta och läsa antal tärningar i koppen
+- Läsa en tärning med index
+- Läsa högsta och lägsta tärningen
+- Sortera tärningar i nummerordning
+- Skaka koppen och få slumpmässiga tärningar
+- Få besked om koppen innehåller Yahtzee, dvs alla tärningar är lika 

@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 namespace FriendList
 {
     public delegate Friend DoYourOwnRandomStuff(Friend friend);
-    public delegate void DoThisActionToEveryFriend(Friend friend);
+    public delegate void SayHelloToFriends(Friend friend);
 
     public class FriendList
     {
@@ -25,10 +25,14 @@ namespace FriendList
             return sRet;
         }
 
-        public void ForEach(DoThisActionToEveryFriend anAction)
-        { 
-        
+        public void SayHello(SayHelloToFriends sayHello)
+        {
+            foreach (var item in myFriends)
+            {
+                sayHello(item);
+            }       
         }
+
 
         public static class Factory
         {

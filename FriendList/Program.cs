@@ -52,12 +52,45 @@ namespace FriendList // Note: actual namespace depends on the project name.
             var friends2 = FriendList.Factory.CreateRandom(5, SemiraFriend);
             Console.WriteLine(friends2);
 
-            var friendsToDisk = FriendList.Factory.CreateRandom(10_000);
+            var friendsToDisk = FriendList.Factory.CreateRandom(100);
             //friendsToDisk.WriteToDisk();
 
             friendsToDisk.SerializeXml();
             friendsToDisk.DeSerializeXml();
+
+            Console.WriteLine("\nHello to Finland");
+            friendsToDisk.SayHello(HelloFinland);
+
+            Console.WriteLine("\nHello to Gavle");
+            friendsToDisk.SayHello(HelloGavle);
+
+            Console.WriteLine("\nHello to Scandinavia");
+            friendsToDisk.SayHello(HelloScandinavia);
+
         }
+
+        public static void HelloFinland(Friend friend)
+        {
+            if (friend.Address.Country == "Finland")
+            {
+                Console.WriteLine($"Hello {friend.FirstName}, {friend.Address.Country} from Finland");
+            }
+        }
+        public static void HelloGavle(Friend friend)
+        {
+            if (friend.Address.City == "Gavle")
+            {
+                Console.WriteLine($"Hello {friend.FirstName}, {friend.Address.City} from Gavle");
+            }
+        }
+        public static void HelloScandinavia(Friend friend)
+        {
+            if (friend.Address.Country != "Finland")
+            {
+                Console.WriteLine($"Hello {friend.FirstName}, {friend.Address.Country} from Scandinavia");
+            }
+        }
+
 
         public static Friend QuanFriend(Friend orgFriend)
         {

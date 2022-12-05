@@ -12,10 +12,7 @@ namespace Yahtzee
 
         public int CompareTo(IDice other)
         {
-            if (this.Face != other.Face)
-                return this.Face.CompareTo(other.Face);
-            else
-                return this.Face.CompareTo(other.Face);
+            return this.Face.CompareTo(other.Face);
         }
         public override string ToString() => $"{Face}";
 

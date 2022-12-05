@@ -7,6 +7,8 @@ using System.Xml.Serialization;
 
 namespace FriendList
 {
+    public delegate Friend DoYourOwnStuff(Friend friend);
+
     public class FriendList
     {
         public  List<Friend> myFriends = new List<Friend>();
@@ -23,12 +25,16 @@ namespace FriendList
         }
         public static class Factory
         {
-            public static FriendList CreateRandom(int NrOfItems)
+            public static FriendList CreateRandom(int NrOfItems, DoYourOwnStuff doIt = null)
             {
                 var myList = new FriendList();
                 for (int i = 0; i < NrOfItems; i++)
                 {
-                    myList.myFriends.Add(Friend.Factory.CreateRandom());
+                    var afriend = Friend.Factory.CreateRandom();
+                    if (doIt != null)
+                        afriend = doIt(afriend);
+
+                    myList.myFriends.Add(afriend);
                 }
                 return myList;
             }

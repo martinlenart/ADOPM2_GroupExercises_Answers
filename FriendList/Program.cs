@@ -45,11 +45,11 @@ namespace FriendList // Note: actual namespace depends on the project name.
             }
 
             Console.WriteLine("\nFriendList - friends1");
-            var friends1 = FriendList.Factory.CreateRandom(10);
+            var friends1 = FriendList.Factory.CreateRandom(10, QuanFriend);
             Console.WriteLine(friends1);
 
             Console.WriteLine("\nFriendList - friends2");
-            var friends2 = FriendList.Factory.CreateRandom(5);
+            var friends2 = FriendList.Factory.CreateRandom(5, SemiraFriend);
             Console.WriteLine(friends2);
 
             var friendsToDisk = FriendList.Factory.CreateRandom(10_000);
@@ -57,6 +57,21 @@ namespace FriendList // Note: actual namespace depends on the project name.
 
             friendsToDisk.SerializeXml();
             friendsToDisk.DeSerializeXml();
+        }
+
+        public static Friend QuanFriend(Friend orgFriend)
+        {
+            orgFriend.FirstName = "Jane";
+            return orgFriend;
+        }
+
+        public static Friend SemiraFriend(Friend orgFriend)
+        {
+            var newAddress = orgFriend.Address;
+            newAddress.City = "Gavle";
+
+            orgFriend.Address = newAddress;
+            return orgFriend;
         }
     }
 }

@@ -26,8 +26,19 @@ namespace Yahtzee
         {
             get
             {
-                Sort();
-                return this[Count - 1];
+                DiceFace high = DiceFace.One;
+                int hiIdx = 0;
+                for (int i = 0; i < Count; i++)
+                {
+                    if (dices[i].Face > high)
+                    {
+                        high = dices[i].Face;
+                        hiIdx = i;
+                    }
+
+                }
+                
+                return dices[hiIdx];
             }
         }
 
@@ -35,8 +46,16 @@ namespace Yahtzee
         {
             get
             {
-                Sort();
-                return this[0];
+                //Same algorithm as Highest but using foreach loop
+                IDice lowDice = new Dice { Face= DiceFace.Six };
+                foreach (var item in dices)
+                {
+                    if (item.Face < lowDice.Face)
+                    {
+                        lowDice= item;
+                    }
+                }
+                return lowDice;
             }
         }
 

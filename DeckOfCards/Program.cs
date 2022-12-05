@@ -53,6 +53,9 @@ namespace DeckOfCards
             Console.WriteLine($"\nShuffled hand of cards:");
             aHand.Shuffle();        //OK once implemented
             Console.WriteLine(aHand);
+
+            Console.WriteLine($"\nDeck after dealing 5 cards:");
+            Console.WriteLine(myDeck);
         }
     }
 }

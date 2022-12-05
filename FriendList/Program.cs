@@ -67,8 +67,16 @@ namespace FriendList // Note: actual namespace depends on the project name.
             Console.WriteLine("\nHello to Scandinavia");
             friendsToDisk.SayHello(HelloScandinavia);
 
+            Console.WriteLine("\nHuge friendlist");
+            FriendList.CreationProgress += ProgressReport;
+            var huge = FriendList.Factory.CreateRandom(1_000_000);
+
         }
 
+        public static void ProgressReport(int completion)
+        {
+            Console.WriteLine($"completed {completion} number");
+        }
         public static void HelloFinland(Friend friend)
         {
             if (friend.Address.Country == "Finland")

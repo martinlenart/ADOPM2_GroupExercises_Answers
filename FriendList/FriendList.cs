@@ -7,11 +7,13 @@ using System.Xml.Serialization;
 
 namespace FriendList
 {
-    public delegate Friend DoYourOwnRandomStuff(Friend friend);
-    public delegate void SayHelloToFriends(Friend friend);
-
+    //public delegate Friend DoYourOwnRandomStuff(Friend friend);
+    //public delegate void SayHelloToFriends(Friend friend);
+    
     public class FriendList
     {
+        public static event Action<int> CreationProgress;
+
         public  List<Friend> myFriends = new List<Friend>();
         public Friend this[int idx]=> myFriends[idx];
 
@@ -25,7 +27,7 @@ namespace FriendList
             return sRet;
         }
 
-        public void SayHello(SayHelloToFriends sayHello)
+        public void SayHello(Action<Friend> sayHello)
         {
             foreach (var item in myFriends)
             {
@@ -36,8 +38,9 @@ namespace FriendList
 
         public static class Factory
         {
-            public static FriendList CreateRandom(int NrOfItems, DoYourOwnRandomStuff doIt = null)
+            public static FriendList CreateRandom(int NrOfItems, Func<Friend,Friend> doIt = null)
             {
+
                 var myList = new FriendList();
                 for (int i = 0; i < NrOfItems; i++)
                 {
@@ -46,6 +49,11 @@ namespace FriendList
                         afriend = doIt(afriend);
 
                     myList.myFriends.Add(afriend);
+
+                    if (i%10_000 ==0)
+                    {
+                        CreationProgress?.Invoke(i);
+                    }
                 }
                 return myList;
             }

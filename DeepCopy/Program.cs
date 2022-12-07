@@ -23,29 +23,29 @@ class Program
         Console.WriteLine(anotherFriend);
 
         //List of persons
-        Person[] list = new Person[20];
-        for (int i = 0; i < list.Length; i++)
+        Person[] persons = new Person[20];
+        for (int i = 0; i < persons.Length; i++)
         {
-            list[i] = Person.Factory.CreateRandom();
+            persons[i] = Person.Factory.CreateRandom();
         }
 
         //Shallow list copy
         Person[] people = new Person[20];
-        Array.Copy(list, people, list.Length);
+        Array.Copy(persons, people, persons.Length);
 
-        list[0].FirstName = "Donald";
-        list[0].LastName = "Duck";
-        Console.WriteLine(list[0]);
+        persons[0].FirstName = "Donald";
+        persons[0].LastName = "Duck";
+        Console.WriteLine(persons[0]);
         Console.WriteLine(people[0]);
 
         //Deep list copy
-        for (int i = 0; i < list.Length; i++)
+        for (int i = 0; i < persons.Length; i++)
         {
-            people[i] = new Person(list[i]);
+            people[i] = new Person(persons[i]);
         }
-        list[5].FirstName = "Donald";
-        list[5].LastName = "Duck";
-        Console.WriteLine(list[5]);
+        persons[5].FirstName = "Donald";
+        persons[5].LastName = "Duck";
+        Console.WriteLine(persons[5]);
         Console.WriteLine(people[5]);
     }
 }

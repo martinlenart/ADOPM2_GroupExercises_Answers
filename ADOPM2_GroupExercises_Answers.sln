@@ -6,7 +6,10 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FFDBB160-F9F5-4FC7-84A0-32C9BAF1BFF2}"
 	ProjectSection(SolutionItems) = preProject
 		DeckOfCards.txt = DeckOfCards.txt
+		DeepCopy.txt = DeepCopy.txt
 		FriendList.txt = FriendList.txt
+		IEquatable_IComparable.txt = IEquatable_IComparable.txt
+		RandomInit.txt = RandomInit.txt
 		Yahtzee.txt = Yahtzee.txt
 	EndProjectSection
 EndProject
@@ -22,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FriendListDelegateEvent", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomInit", "RandomInit\RandomInit.csproj", "{54982839-982B-43C2-AD90-94BDD039944D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeepCopy", "DeepCopy\DeepCopy.csproj", "{28F2F2AA-F34C-4F87-9924-57F8BFD94C49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeepCopy", "DeepCopy\DeepCopy.csproj", "{28F2F2AA-F34C-4F87-9924-57F8BFD94C49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

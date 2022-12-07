@@ -1,0 +1,4 @@
+1. Declare a class GetRandom that implements IGetRandom
+2. Declare a class Person that implements IPerson
+3. In Program.cs instantiate objects and assign to variables rnd and afriends. 
+	Run the code to verify implementation

@@ -1,0 +1,4 @@
+1. In Person.cs, write a class factory that uses GetRandom to create an instance of Person initiated with random data
+2. In Person.cs, Write a copy constructor
+3. In Program.cs, Make a deep copy of aFriend
+4. In Program.cs, Make a deep copy of persons

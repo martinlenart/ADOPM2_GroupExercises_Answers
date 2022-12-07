@@ -45,7 +45,7 @@ namespace RandomInit
                     int year = rnd.Next(Math.Min(fromYear.Value, toYear.Value), 
                         Math.Max(fromYear.Value, toYear.Value));
                     int month = rnd.Next(1, 13);
-                    int day = rnd.Next(1, 31);
+                    int day = rnd.Next(1, 32);
 
                     _date = new DateTime(year, month, day);
                     dateOK = true;

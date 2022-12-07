@@ -20,7 +20,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FriendListSerialize", "Frie
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FriendListDelegateEvent", "FriendListDelegateEvent\FriendListDelegateEvent.csproj", "{425A9342-A7DE-4039-AAD5-BBD03E358FC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomInit", "RandomInit\RandomInit.csproj", "{54982839-982B-43C2-AD90-94BDD039944D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomInit", "RandomInit\RandomInit.csproj", "{54982839-982B-43C2-AD90-94BDD039944D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeepCopy", "DeepCopy\DeepCopy.csproj", "{28F2F2AA-F34C-4F87-9924-57F8BFD94C49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,6 +54,10 @@ Global
 		{54982839-982B-43C2-AD90-94BDD039944D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54982839-982B-43C2-AD90-94BDD039944D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54982839-982B-43C2-AD90-94BDD039944D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28F2F2AA-F34C-4F87-9924-57F8BFD94C49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28F2F2AA-F34C-4F87-9924-57F8BFD94C49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28F2F2AA-F34C-4F87-9924-57F8BFD94C49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28F2F2AA-F34C-4F87-9924-57F8BFD94C49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

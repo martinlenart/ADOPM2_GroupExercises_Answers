@@ -42,7 +42,8 @@ namespace RandomInit
 
                 try
                 {
-                    int year = rnd.Next(fromYear.Value, toYear.Value);
+                    int year = rnd.Next(Math.Min(fromYear.Value, toYear.Value), 
+                        Math.Max(fromYear.Value, toYear.Value));
                     int month = rnd.Next(1, 13);
                     int day = rnd.Next(1, 31);
 

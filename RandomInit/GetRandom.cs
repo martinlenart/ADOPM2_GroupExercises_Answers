@@ -52,7 +52,7 @@ namespace RandomInit
                 }
                 catch
                 {
-                    dateOK = true;
+                    dateOK = false;
                 }
             }
             return _date;

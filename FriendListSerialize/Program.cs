@@ -3,7 +3,7 @@
 
 using System;
 
-namespace FriendList // Note: actual namespace depends on the project name.
+namespace FriendListSerialize // Note: actual namespace depends on the project name.
 {
     internal class Program
     {
@@ -51,6 +51,12 @@ namespace FriendList // Note: actual namespace depends on the project name.
             Console.WriteLine("\nFriendList - friends2");
             var friends2 = FriendList.Factory.CreateRandom(5);
             Console.WriteLine(friends2);
+
+            var friendsToDisk = FriendList.Factory.CreateRandom(100);
+            friendsToDisk.WriteToDisk();
+
+            friendsToDisk.SerializeXml();
+            friendsToDisk.DeSerializeXml();
         }
     }
 }

@@ -16,6 +16,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeckOfCards", "DeckOfCards\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yahtzee", "Yahtzee\Yahtzee.csproj", "{8B1FC730-CA58-48AE-8D10-F4721836B666}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendListSerialize", "FriendListSerialize\FriendListSerialize.csproj", "{3F9C8267-22ED-4D5D-88F8-26B9F8608CF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendListDelegateEvent", "FriendListDelegateEvent\FriendListDelegateEvent.csproj", "{425A9342-A7DE-4039-AAD5-BBD03E358FC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +38,14 @@ Global
 		{8B1FC730-CA58-48AE-8D10-F4721836B666}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B1FC730-CA58-48AE-8D10-F4721836B666}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B1FC730-CA58-48AE-8D10-F4721836B666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F9C8267-22ED-4D5D-88F8-26B9F8608CF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F9C8267-22ED-4D5D-88F8-26B9F8608CF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F9C8267-22ED-4D5D-88F8-26B9F8608CF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F9C8267-22ED-4D5D-88F8-26B9F8608CF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{425A9342-A7DE-4039-AAD5-BBD03E358FC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{425A9342-A7DE-4039-AAD5-BBD03E358FC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{425A9342-A7DE-4039-AAD5-BBD03E358FC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{425A9342-A7DE-4039-AAD5-BBD03E358FC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

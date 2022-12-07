@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,6 @@ namespace FriendList
             string sRet = $"{FirstName} {LastName}, {Email}, from {Address.ToString()}";
             return sRet;
         }
-        
 
         public Friend(string firstname, string lastname, string email, AddressType address)
         {

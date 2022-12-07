@@ -9,7 +9,8 @@ namespace FriendList
 {
     public class FriendList
     {
-        public  List<Friend> myFriends = new List<Friend>();
+
+        private  List<Friend> myFriends = new List<Friend>();
         public Friend this[int idx]=> myFriends[idx];
 
         public override string ToString()

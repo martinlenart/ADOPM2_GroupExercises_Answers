@@ -25,14 +25,13 @@ namespace IEquatable_IComparable
         #endregion
 
         #region operator overloading
-        public static bool operator ==(IPerson c1, Person c2) => c1.Equals(c2);
-        public static bool operator !=(IPerson c1, Person c2) => !c1.Equals(c2);
+        public static bool operator ==(Person c1, IPerson c2) => c1.Equals(c2);
+        public static bool operator !=(Person c1, IPerson c2) => !c1.Equals(c2);
         #endregion
 
         #region Implementation IComparable<T> interface
         public int CompareTo(IPerson other)
         {
-            //Sort on Make -> Model -> Year
             if (LastName != other.LastName)
                 return LastName.CompareTo(other.LastName);
 

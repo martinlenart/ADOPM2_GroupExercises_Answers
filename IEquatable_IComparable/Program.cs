@@ -14,12 +14,13 @@
             var aPerson = new Person((Person) persons[0]);
             Console.WriteLine(persons.Contains(aPerson));   //true
 
+            
             //Testing operator overload
             //As I have implemented overloading on IPerson, one of the operands has to
             //casted to the instantiated type.
             //If interface was not used this is ofcourse not needed as the compiler knows what
             //what implementation type the == is meant to work on
-            Console.WriteLine(aPerson == (Person) persons[0]); //true
+            Console.WriteLine(aPerson == persons[0]); //true
 
             //Testing Sort
             persons.Sort();
@@ -27,6 +28,7 @@
             {
                 Console.WriteLine(item);
             }
+           
 
          }
     }
